@@ -7,8 +7,7 @@ public static class NumericExtension {
     /// Returns the modulus (and not the remainder <c>%</c>). 
     /// </summary>
     /// <returns>An integer in the range [0, <paramref name="n"/>)</returns>
-    public static T Modulo<T>(this T i, T n)
-        where T : IBinaryInteger<T> {
+    public static T Modulo<T>(this T i, T n) where T : IBinaryInteger<T> {
         return ((i % n) + n) % n;
     }
 

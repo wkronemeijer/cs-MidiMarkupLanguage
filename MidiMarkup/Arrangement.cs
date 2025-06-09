@@ -26,7 +26,7 @@ public abstract partial class Arrangement {
         public override NoteLength Length { get; }
 
         public Harmony(IEnumerable<Arrangement> parts) {
-            Parts = ImmutableList.CreateRange(parts);
+            Parts = [.. parts];
             Length = Parts.Aggregate(
                 NoteLength.Zero,
                 static (longestSoFar, part) => NoteLength.Max(longestSoFar, part.Length)
@@ -39,7 +39,7 @@ public abstract partial class Arrangement {
         public override NoteLength Length { get; }
 
         public Melody(IEnumerable<Arrangement> parts) {
-            Parts = ImmutableList.CreateRange(parts);
+            Parts = [.. parts];
             Length = Parts.Aggregate(
                 NoteLength.Zero,
                 static (totalLength, part) => totalLength + part.Length

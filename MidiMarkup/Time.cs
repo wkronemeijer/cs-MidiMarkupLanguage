@@ -1,7 +1,7 @@
 namespace MidiMarkup;
 
 public readonly struct AbsoluteTime {
-    public static readonly DateTime Anchor = new(2000, 1, 1);
+    public static readonly DateTime Anchor = new(2020, 1, 1);
 
     public double SecondsSinceAnchor { get; }
 

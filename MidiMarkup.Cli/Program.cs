@@ -4,10 +4,6 @@ using MidiMarkup.Midi;
 
 using NAudio.Midi;
 
-interface INoteEventSink {
-    void Send(NoteEvent e);
-}
-
 public sealed class Program(MidiOut device) {
     private static MidiOut PickDevice() {
         var deviceCount = MidiOut.NumberOfDevices;
